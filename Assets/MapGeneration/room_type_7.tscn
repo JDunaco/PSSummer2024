@@ -25,8 +25,6 @@ bg_color = Color(0.147654, 0.016427, 0.0353238, 1)
 
 [node name="RoomType7" type="Panel"]
 material = SubResource("ShaderMaterial_t2e13")
-offset_left = -319.0
-offset_top = 617.0
-offset_right = -159.0
-offset_bottom = 745.0
+offset_right = 160.0
+offset_bottom = 128.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mceu6")

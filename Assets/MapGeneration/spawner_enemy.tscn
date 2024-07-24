@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://j5el1s7pmqon"]
+
+[ext_resource type="Script" path="res://Assets/MapGeneration/Level1Map.gd" id="1_w54bp"]
+
+[node name="Spawner_enemy" type="Node2D"]
+script = ExtResource("1_w54bp")
+
+[node name="Container" type="Node" parent="."]

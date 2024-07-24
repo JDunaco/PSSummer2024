@@ -24,8 +24,6 @@ shader = SubResource("Shader_awpjp")
 
 [node name="RoomType6" type="Panel"]
 material = SubResource("ShaderMaterial_t2e13")
-offset_left = -155.0
-offset_top = 618.0
-offset_right = 5.0
-offset_bottom = 746.0
+offset_right = 160.0
+offset_bottom = 128.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_01jtx")
