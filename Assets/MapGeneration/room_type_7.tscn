@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmspydsb82e0"]
+
+[sub_resource type="Shader" id="Shader_awpjp"]
+code = "shader_type canvas_item;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	// Called for every pixel the material is visible on.
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t2e13"]
+shader = SubResource("Shader_awpjp")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mceu6"]
+bg_color = Color(0.147654, 0.016427, 0.0353238, 1)
+
+[node name="RoomType7" type="Panel"]
+material = SubResource("ShaderMaterial_t2e13")
+offset_left = -319.0
+offset_top = 617.0
+offset_right = -159.0
+offset_bottom = 745.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mceu6")
