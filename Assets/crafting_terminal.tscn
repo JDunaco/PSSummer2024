@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://cknlxv7rny8b7"]
+
+[ext_resource type="Texture2D" uid="uid://ceen5w20gug3d" path="res://Assets/Random/Itemsize.png" id="1_d36vb"]
+[ext_resource type="Texture2D" uid="uid://c7xj40fn6ywyv" path="res://Assets/Random/Crafting Slots.png" id="2_hvxom"]
+[ext_resource type="Texture2D" uid="uid://dsw7iongct8vl" path="res://Assets/Random/Equal.png" id="6_vrs5h"]
+[ext_resource type="PackedScene" uid="uid://bv48cbw4jx8lt" path="res://Assets/Ingredients/Draggable Sprite/dragable_item_1.tscn" id="7_7irhh"]
+[ext_resource type="Texture2D" uid="uid://ckjcmds78ph2p" path="res://Assets/Random/Plus.png" id="7_57ccm"]
+[ext_resource type="PackedScene" uid="uid://r7xnii6to0l0" path="res://Assets/Ingredients/Draggable Sprite/dragable_item_2.tscn" id="7_fkrb2"]
+[ext_resource type="PackedScene" uid="uid://bo87po7tuu8l0" path="res://Assets/Ingredients/Draggable Sprite/dragable_item_3.tscn" id="7_rapyc"]
+
+[node name="CraftingTerminal" type="Node2D"]
+
+[node name="MainBackground" type="TextureRect" parent="."]
+offset_left = 18.0
+offset_top = 15.0
+offset_right = 1135.0
+offset_bottom = 633.0
+texture = ExtResource("1_d36vb")
+
+[node name="Slots" type="TextureRect" parent="."]
+offset_left = 150.0
+offset_top = 450.0
+offset_right = 278.0
+offset_bottom = 578.0
+texture = ExtResource("2_hvxom")
+expand_mode = 1
+
+[node name="Slots2" type="TextureRect" parent="."]
+offset_left = 500.0
+offset_top = 450.0
+offset_right = 628.0
+offset_bottom = 578.0
+texture = ExtResource("2_hvxom")
+expand_mode = 1
+
+[node name="Slots3" type="TextureRect" parent="."]
+offset_left = 950.0
+offset_top = 450.0
+offset_right = 1078.0
+offset_bottom = 578.0
+texture = ExtResource("2_hvxom")
+expand_mode = 1
+
+[node name="ItemSlot" type="Node2D" parent="."]
+position = Vector2(797, 514)
+scale = Vector2(0.495819, 0.563333)
+
+[node name="ItemSlot2" type="Node2D" parent="."]
+position = Vector2(797, 514)
+scale = Vector2(0.495819, 0.563333)
+
+[node name="ItemSlot3" type="Node2D" parent="."]
+position = Vector2(797, 514)
+scale = Vector2(0.495819, 0.563333)
+
+[node name="Equal" type="Sprite2D" parent="."]
+position = Vector2(797, 514)
+scale = Vector2(0.495819, 0.563333)
+texture = ExtResource("6_vrs5h")
+
+[node name="Plus" type="Sprite2D" parent="."]
+position = Vector2(390, 514)
+scale = Vector2(0.474916, 0.47)
+texture = ExtResource("7_57ccm")
+
+[node name="Dragable Item 1" parent="." instance=ExtResource("7_7irhh")]
+position = Vector2(200, 120)
+scale = Vector2(0.2, 0.2)
+
+[node name="Dragable Item 2" parent="." instance=ExtResource("7_fkrb2")]
+position = Vector2(400, 120)
+scale = Vector2(0.177396, 0.182071)
+
+[node name="Dragable Item 3" parent="." instance=ExtResource("7_rapyc")]
+position = Vector2(600, 119.925)
+scale = Vector2(0.190957, 0.1841)
