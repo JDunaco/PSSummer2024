@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://je2p1d20yrrw"]
+[gd_scene load_steps=6 format=3 uid="uid://6sppp5b2odxa"]
 
-[ext_resource type="Texture2D" uid="uid://byen5p4j5cwh3" path="res://icon222.svg" id="1_djo1s"]
-[ext_resource type="Script" path="res://Assets/Mobs/EnemyBase.gd" id="1_nwlak"]
+[ext_resource type="Script" path="res://Assets/Mobs/EnemyBase.gd" id="1_6a27o"]
+[ext_resource type="Texture2D" uid="uid://byen5p4j5cwh3" path="res://icon222.svg" id="2_rwu5n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug8rx"]
 size = Vector2(16, 32)
@@ -12,7 +12,7 @@ size = Vector2(16, 32)
 radius = 57.2713
 
 [node name="EnemyBase" type="CharacterBody2D"]
-script = ExtResource("1_nwlak")
+script = ExtResource("1_6a27o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
@@ -24,10 +24,10 @@ position = Vector2(4, 0)
 sprite_frames = SubResource("SpriteFrames_rpt12")
 
 [node name="Icon222" type="Sprite2D" parent="."]
-modulate = Color(1, 0.461129, 0.360872, 1)
+modulate = Color(0.294801, 0.894555, 0.263705, 1)
 position = Vector2(0, -5)
 scale = Vector2(0.125, 0.25)
-texture = ExtResource("1_djo1s")
+texture = ExtResource("2_rwu5n")
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 

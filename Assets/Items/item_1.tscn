@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy2edqj8p1fkl"]
+
+[ext_resource type="Script" path="res://Item1.gd" id="1_t5nhi"]
+[ext_resource type="Texture2D" uid="uid://c7kfqk47wv0cq" path="res://Assets/Items/PencilItem.png" id="2_8bfaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itxm7"]
+size = Vector2(13, 3)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f03v1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8bfaa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Item1" type="Area2D"]
+script = ExtResource("1_t5nhi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_itxm7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f03v1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

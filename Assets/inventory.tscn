@@ -1,0 +1,153 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwrarsoq122f0"]
+
+[ext_resource type="Script" path="res://Assets/inventory.gd" id="1_cn2vs"]
+[ext_resource type="Texture2D" uid="uid://dxupkyd2hvkfr" path="res://Assets/Random/InventoryBack.png" id="1_nuva3"]
+[ext_resource type="Texture2D" uid="uid://ceen5w20gug3d" path="res://Assets/Random/Itemsize.png" id="2_ioqfb"]
+[ext_resource type="PackedScene" uid="uid://cy2edqj8p1fkl" path="res://Assets/Items/item_1.tscn" id="3_fcv1t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uo5gx"]
+texture = ExtResource("2_ioqfb")
+
+[node name="Inventory" type="Node2D"]
+script = ExtResource("1_cn2vs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = 1.0
+offset_right = 327.0
+offset_bottom = 196.0
+texture = ExtResource("1_nuva3")
+expand_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 321.0
+offset_bottom = 194.0
+
+[node name="Area1" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uo5gx")
+
+[node name="Item1" parent="GridContainer/Area1" instance=ExtResource("3_fcv1t")]
+position = Vector2(20, 12)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="GridContainer/Area1"]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "serserserserserserserserserserr"
+
+[node name="Area2" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uo5gx")
+
+[node name="Item1" parent="GridContainer/Area2" instance=ExtResource("3_fcv1t")]
+position = Vector2(20, 12)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="GridContainer/Area2"]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "serserserserserserserserserserr"
+
+[node name="Area3" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uo5gx")
+
+[node name="Item1" parent="GridContainer/Area3" instance=ExtResource("3_fcv1t")]
+position = Vector2(20, 12)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="GridContainer/Area3"]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "serserserserserserserserserserr"
+
+[node name="Area4" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uo5gx")
+
+[node name="Item1" parent="GridContainer/Area4" instance=ExtResource("3_fcv1t")]
+position = Vector2(20, 12)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="GridContainer/Area4"]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "serserserserserserserserserserr"
+
+[node name="Area5" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uo5gx")
+
+[node name="Item1" parent="GridContainer/Area5" instance=ExtResource("3_fcv1t")]
+position = Vector2(20, 12)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="GridContainer/Area5"]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "serserserserserserserserserserr"
+
+[node name="Area6" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uo5gx")
+
+[node name="Item1" parent="GridContainer/Area6" instance=ExtResource("3_fcv1t")]
+position = Vector2(20, 12)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="GridContainer/Area6"]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "serserserserserserserserserserr"
+
+[node name="Area7" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uo5gx")
+
+[node name="Item1" parent="GridContainer/Area7" instance=ExtResource("3_fcv1t")]
+position = Vector2(20, 12)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="GridContainer/Area7"]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "serserserserserserserserserserr"
+
+[node name="Area8" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(320, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uo5gx")
+
+[node name="Item1" parent="GridContainer/Area8" instance=ExtResource("3_fcv1t")]
+position = Vector2(20, 12)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="GridContainer/Area8"]
+layout_mode = 0
+offset_left = 39.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "serserserserserserserserserserr"
