@@ -4,6 +4,8 @@ var is_draggable = false #state Management
 var mouse_offset #center mouse
 var delay = 10
 var positionInitial = Vector2(600,120)
+var craftingSlot1 = false
+var craftingSlot2 = false
 
 func _ready():
 	self.position = positionInitial
@@ -29,6 +31,8 @@ func _checkRange1():
 		if(self.position.y > 450 && self.position.y < 450+128) :
 			is_draggable = false
 			self.position = Vector2(220,520)
+			craftingSlot1 = true
+			craftingSlot2 = false
 	else:
 		_checkRange2()
 
@@ -37,6 +41,10 @@ func _checkRange2():
 		if(self.position.y > 450 && self.position.y < 450+128) :
 			is_draggable = false
 			self.position = Vector2(570,520)
+			craftingSlot2 = true
+			craftingSlot1 = false
 	else:
 		is_draggable = false
 		self.position = positionInitial
+		craftingSlot1 = false
+		craftingSlot2 = false

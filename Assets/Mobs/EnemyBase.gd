@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var player
-var speed = 50
+var speed = 25
 var patrol = false
 var chase = false
 var timerToStartPatrol = 2.0
@@ -16,7 +16,7 @@ func _physics_process(delta):
 		var direction = (player.position - self.position).normalized()
 		if direction.x > 0:
 			# get_node("AnimatedSprite2D").flip_h = true
-			velocity = direction * speed * delta
+			velocity = direction * speed
 		else : 
 			# get_node("AnimatedSprite2D").flip_h = false
 			velocity = direction * speed

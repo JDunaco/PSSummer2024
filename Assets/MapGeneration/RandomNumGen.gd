@@ -4,6 +4,7 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 #preload enemy scenes
 const enemy_base = preload("res://Assets/Mobs/EnemyCopy.tscn")
+const itemSpawns = [preload("res://Assets/Items/item_1.tscn"),preload("res://Assets/Items/item_2.tscn"),preload("res://Assets/Items/item_3.tscn")]
 #array to hold how many times a room can spawn
 var numofSelection = [1,1,1,1,1,1,1,1]
 #array for random rooms generated
@@ -16,6 +17,17 @@ var initialPosition = Vector2(-300,-300)
 var tiles = ["RoomType1","RoomType2","RoomType3","RoomType4","RoomType5","RoomType6","RoomType7","RoomType8"]
 # var to check if they have any more room spawns
 var tileNumToSpawn = 0
+
+var RoomSpawn1 = Vector2(2000,100)
+var RoomSpawn2 = Vector2(2000,350)
+var RoomSpawn3 = Vector2(2000,600)
+var RoomSpawn4 = Vector2(2000,850)
+
+
+
+
+
+
 #NOTE will need to swap over to multilevel room type idea
 func _ready():
 	_moveRoomsToStart()
@@ -34,17 +46,17 @@ func _moveRoomsToStart():
 #move selected tile to position
 func _moveRandTile(spotToMove, tileToMove):
 	if spotToMove == 0:
-		get_node(tiles[tileToMove]).position = Vector2(200,462)
-		spawn(Vector2(200,462))
+		get_node(tiles[tileToMove]).position = RoomSpawn1
+		spawn(RoomSpawn1)
 	elif spotToMove == 1:
-		get_node(tiles[tileToMove]).position = Vector2(488,462)
-		spawn(Vector2(488,462))
+		get_node(tiles[tileToMove]).position = RoomSpawn2
+		spawn(RoomSpawn2)
 	elif spotToMove == 2:
-		get_node(tiles[tileToMove]).position = Vector2(200,238)
-		spawn(Vector2(200,238))
+		get_node(tiles[tileToMove]).position = RoomSpawn3
+		spawn(RoomSpawn3)
 	elif spotToMove == 3:
-		get_node(tiles[tileToMove]).position = Vector2(488,238)
-		spawn(Vector2(488,238))
+		get_node(tiles[tileToMove]).position = RoomSpawn4
+		spawn(RoomSpawn4)
 
 #randomly select room
 func _randSelect():
@@ -63,10 +75,27 @@ func _randSelect():
 #spawn function for enemies randomly in room.
 func spawn(pos):
 	var enemyInstance = enemy_base.instantiate()
+	var randItemNum = randi_range(0,2)
+	var itemInstance = itemSpawns[randItemNum].instantiate()
+	var itemSpawnPos = Vector2(0,0)
+	var maxRangeSpawn = Vector2(0,0)
+	maxRangeSpawn = pos
+	itemSpawnPos.x = randf_range(pos.x + 20, pos.x + 140)
 	pos.x = randf_range(pos.x+20, pos.x+140)
-	print(pos.x)
+	itemSpawnPos.y = randf_range(pos.y + 20, pos.y + 140)
 	pos.y = randf_range(pos.y+20, pos.y+108)
-	print(pos.y)
+	if itemSpawnPos.x >= pos.x - 20 and itemSpawnPos.x <= pos.x + 20 :
+		if(itemSpawnPos.x >= maxRangeSpawn.x - 20):
+			itemSpawnPos.x -= 20
+		else:
+			itemSpawnPos.x += 20
+	if itemSpawnPos.y >= pos.x - 20 and itemSpawnPos.y <= pos.x + 20 :
+		if(itemSpawnPos.y >= maxRangeSpawn.y - 20):
+			itemSpawnPos.y -= 20
+		else:
+			itemSpawnPos.y += 20
 	enemyInstance.position = pos
+	itemInstance.position = itemSpawnPos
+	add_child(itemInstance)
 	add_child(enemyInstance)
 

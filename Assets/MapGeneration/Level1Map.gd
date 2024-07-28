@@ -17,5 +17,7 @@ func _process(_delta):
 		inventory.hide()
 
 
+
 func MovePlayerToSpawn():
 	get_node(player).position = spawnPos
+
