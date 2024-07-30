@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://boulmdhkntwif"]
+
+[ext_resource type="Script" path="res://Scenes/how_to.gd" id="1_h070f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oaqo6"]
+bg_color = Color(0.17088, 0.328288, 0.0736989, 1)
+corner_detail = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_pswfd"]
+font_size = 29
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HowTo" type="Node2D"]
+script = ExtResource("1_h070f")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 1150.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oaqo6")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 709.0
+offset_top = 466.0
+offset_right = 1115.0
+offset_bottom = 620.0
+text = "Back to Main Menu
+"
+
+[node name="Controls" type="Label" parent="CanvasLayer"]
+offset_left = 99.0
+offset_top = 262.0
+offset_right = 343.0
+offset_bottom = 392.0
+text = "WASD to move
+C to craft
+"
+label_settings = SubResource("LabelSettings_pswfd")
+
+[node name="Controls2" type="Label" parent="CanvasLayer"]
+offset_left = 500.0
+offset_top = 74.0
+offset_right = 1117.0
+offset_bottom = 357.0
+text = "You need to explore the floors to find 
+ingredients to craft a key to help 
+you on your journey to the 
+Principal's Office to take back what 
+he took from you."
+label_settings = SubResource("LabelSettings_pswfd")
+
+[connection signal="button_up" from="CanvasLayer/Button" to="." method="_on_button_button_up"]

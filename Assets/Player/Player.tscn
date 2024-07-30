@@ -25,19 +25,12 @@ script = ExtResource("1_2xh2x")
 position = Vector2(0, 0.295519)
 shape = SubResource("RectangleShape2D_qu6yp")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 0.295519)
-scale = Vector2(0.125, 0.2)
-sprite_frames = SubResource("SpriteFrames_352i2")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 0.295519)
 zoom = Vector2(4, 4)
 
 [node name="FlashLightRight" type="PointLight2D" parent="."]
-position = Vector2(8, 2.29552)
+position = Vector2(7.615, 2)
 scale = Vector2(0.280612, 0.765625)
 color = Color(0.885259, 0.593787, 0.131344, 1)
 energy = 2.44
@@ -47,7 +40,7 @@ offset = Vector2(96.8193, 0.267078)
 
 [node name="FlashLightL" type="PointLight2D" parent="."]
 visible = false
-position = Vector2(-8.33136, 0.408634)
+position = Vector2(-7.915, 1)
 rotation = 3.14159
 scale = Vector2(0.280612, 0.765625)
 color = Color(0.885259, 0.593787, 0.131344, 1)
@@ -58,7 +51,7 @@ offset = Vector2(96.8193, 0.267078)
 
 [node name="FlashLightDown" type="PointLight2D" parent="."]
 visible = false
-position = Vector2(-1.83136, 13.4086)
+position = Vector2(-1, 13.125)
 rotation = 1.5708
 scale = Vector2(0.280612, 0.765625)
 color = Color(0.885259, 0.593787, 0.131344, 1)
@@ -69,7 +62,7 @@ offset = Vector2(96.8193, 0.267078)
 
 [node name="FlashLightUP" type="PointLight2D" parent="."]
 visible = false
-position = Vector2(0.668636, -12.3314)
+position = Vector2(1, -12.645)
 rotation = -1.5708
 scale = Vector2(0.280612, 0.765625)
 color = Color(0.885259, 0.593787, 0.131344, 1)
@@ -77,3 +70,10 @@ energy = 2.44
 shadow_enabled = true
 texture = ExtResource("3_0frh8")
 offset = Vector2(96.8193, 0.267078)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 0.295519)
+scale = Vector2(0.125, 0.2)
+sprite_frames = SubResource("SpriteFrames_352i2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

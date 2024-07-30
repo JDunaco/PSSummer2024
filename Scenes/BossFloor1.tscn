@@ -1,0 +1,247 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnv2ao53hb31y"]
+
+[ext_resource type="PackedScene" uid="uid://gwmo12xsoi64" path="res://Assets/Player/Player.tscn" id="1_0shvn"]
+[ext_resource type="Texture2D" uid="uid://bqvm7b5y8gdtk" path="res://Assets/MapPieces/Wall.png" id="1_2805a"]
+[ext_resource type="PackedScene" uid="uid://cbr6rxcrsqp6b" path="res://Assets/Mobs/boss_1.tscn" id="3_5610g"]
+[ext_resource type="PackedScene" uid="uid://dr3tfagr03hdp" path="res://Assets/MapPieces/door.tscn" id="4_ei1si"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28yqv"]
+bg_color = Color(0.258734, 0.411452, 0.647842, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yl43t"]
+size = Vector2(64, 64)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_agnbu"]
+polygon = PackedVector2Array(-32, -30, 32, -30, 32, 34, -32, 34)
+
+[node name="BossFloor1" type="Node2D"]
+position = Vector2(-8, -7)
+
+[node name="Map" type="Node2D" parent="."]
+position = Vector2(543, 540)
+
+[node name="Panel" type="Panel" parent="Map"]
+offset_left = -543.0
+offset_top = -540.0
+offset_right = 609.0
+offset_bottom = 108.0
+
+[node name="Panel2" type="Panel" parent="Map"]
+offset_left = -156.0
+offset_top = -528.0
+offset_right = 151.0
+offset_bottom = 89.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_28yqv")
+
+[node name="Walls" type="Node2D" parent="Map"]
+
+[node name="Wall1" type="StaticBody2D" parent="Map/Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall1"]
+position = Vector2(-74, -52)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall1"]
+position = Vector2(-74, -53)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall1"]
+position = Vector2(-74, -52)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall2" type="StaticBody2D" parent="Map/Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall2"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall2"]
+position = Vector2(65, -52)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall2"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall3" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(-87, -85)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall3"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall3"]
+position = Vector2(65, -52)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall3"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall4" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(24, -139)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall4"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall4"]
+position = Vector2(65, -52)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall4"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall5" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(-147, -202)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall5"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall5"]
+position = Vector2(65, -52)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall5"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall6" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(-11, -253)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall6"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall6"]
+position = Vector2(65, -52)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall6"]
+position = Vector2(65, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall7" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(-11, -253)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall7"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall7"]
+position = Vector2(-31, -87)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall7"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall8" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(54, -301)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall8"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall8"]
+position = Vector2(-31, -87)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall8"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall9" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(-72, -342)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall9"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall9"]
+position = Vector2(-31, -87)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall9"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall10" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(86, -389)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall10"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall10"]
+position = Vector2(-31, -87)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall10"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Wall11" type="StaticBody2D" parent="Map/Walls"]
+position = Vector2(-6, -419)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Wall11"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_yl43t")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Wall11"]
+position = Vector2(-31, -87)
+scale = Vector2(0.5, 0.5)
+occluder = SubResource("OccluderPolygon2D_agnbu")
+
+[node name="Wall" type="Sprite2D" parent="Map/Walls/Wall11"]
+position = Vector2(-31, -86)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2805a")
+
+[node name="Player" parent="." instance=ExtResource("1_0shvn")]
+position = Vector2(537, 607)
+
+[node name="Boss1" parent="." instance=ExtResource("3_5610g")]
+position = Vector2(724, -16)
+centerPosX = 550.0
+centerPosY = 375.0
+
+[node name="MapCenter" type="Node2D" parent="."]
+position = Vector2(550, 375)
+
+[node name="Door" parent="." instance=ExtResource("4_ei1si")]
+position = Vector2(541, 27)
+door_Num = 200

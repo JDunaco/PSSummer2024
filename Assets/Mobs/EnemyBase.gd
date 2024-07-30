@@ -8,7 +8,7 @@ var timerToStartPatrol = 2.0
 var patrolTimer = 4.0
 var rPatrol = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity = Vector2.ZERO
 	if player:
 		chase = true

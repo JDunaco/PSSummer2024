@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cknlxv7rny8b7"]
+[gd_scene load_steps=11 format=3 uid="uid://cknlxv7rny8b7"]
 
 [ext_resource type="Texture2D" uid="uid://ceen5w20gug3d" path="res://Assets/Random/Itemsize.png" id="1_d36vb"]
 [ext_resource type="Script" path="res://Assets/crafting_terminal.gd" id="1_kj2vb"]
@@ -11,6 +11,11 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_bv5rm"]
 font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_fi1ei"]
+font_size = 47
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="CraftingTerminal" type="Node2D"]
 script = ExtResource("1_kj2vb")
@@ -110,5 +115,27 @@ offset_right = 255.0
 offset_bottom = 587.0
 text = "INV #"
 label_settings = SubResource("LabelSettings_bv5rm")
+
+[node name="DoorUnlocked" type="Label" parent="."]
+visible = false
+offset_left = 771.0
+offset_top = 91.0
+offset_right = 1084.0
+offset_bottom = 299.0
+text = "The Door 
+was Unlocked"
+label_settings = SubResource("LabelSettings_fi1ei")
+horizontal_alignment = 1
+
+[node name="NEI" type="Label" parent="."]
+visible = false
+offset_left = 771.0
+offset_top = 91.0
+offset_right = 1084.0
+offset_bottom = 299.0
+text = "Not Enough
+Items"
+label_settings = SubResource("LabelSettings_fi1ei")
+horizontal_alignment = 1
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

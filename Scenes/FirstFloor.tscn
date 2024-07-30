@@ -1,21 +1,22 @@
-[gd_scene load_steps=28 format=3 uid="uid://cuoknv85ogn14"]
+[gd_scene load_steps=29 format=3 uid="uid://cr4wlfca083pv"]
 
-[ext_resource type="Texture2D" uid="uid://dv7ht2ywppt40" path="res://Assets/MapPieces/TilesetTest.png" id="1_7jera"]
-[ext_resource type="Script" path="res://Assets/MapGeneration/Level1Map.gd" id="1_onkc4"]
-[ext_resource type="PackedScene" uid="uid://gwmo12xsoi64" path="res://Assets/Player/Player.tscn" id="1_wmuxj"]
-[ext_resource type="Script" path="res://Assets/MapGeneration/RandomNumGen.gd" id="3_3i8qs"]
-[ext_resource type="Texture2D" uid="uid://bqvm7b5y8gdtk" path="res://Assets/MapPieces/Wall.png" id="3_tdcge"]
-[ext_resource type="PackedScene" uid="uid://p2pwqg2lxk1t" path="res://Assets/MapGeneration/room_type_1.tscn" id="4_jjuqo"]
-[ext_resource type="Texture2D" uid="uid://cvb1y3842yai2" path="res://Assets/MapPieces/Wall_topper.png" id="4_v3t7s"]
-[ext_resource type="PackedScene" uid="uid://d2yvbfjtsdnmf" path="res://Assets/MapGeneration/room_type_2.tscn" id="5_1861j"]
-[ext_resource type="PackedScene" uid="uid://fvo5m8ehqjvf" path="res://Assets/MapGeneration/room_type_3.tscn" id="6_g0a03"]
-[ext_resource type="PackedScene" uid="uid://drhey6qyj8l5g" path="res://Assets/MapGeneration/room_type_4.tscn" id="7_5u8qm"]
-[ext_resource type="PackedScene" uid="uid://6y02js3m5kqw" path="res://Assets/MapGeneration/room_type_5.tscn" id="8_fakkf"]
-[ext_resource type="PackedScene" uid="uid://d3pwwkoodk366" path="res://Assets/MapGeneration/room_type_6.tscn" id="9_ns6r4"]
-[ext_resource type="PackedScene" uid="uid://bmspydsb82e0" path="res://Assets/MapGeneration/room_type_7.tscn" id="10_bue6o"]
-[ext_resource type="PackedScene" uid="uid://durdc0tm762gw" path="res://Assets/MapGeneration/room_type_8.tscn" id="11_7k3bc"]
-[ext_resource type="PackedScene" uid="uid://dwrarsoq122f0" path="res://Assets/inventory.tscn" id="14_fgykl"]
-[ext_resource type="PackedScene" uid="uid://dr3tfagr03hdp" path="res://Assets/MapPieces/door.tscn" id="16_5lncv"]
+[ext_resource type="Script" path="res://Assets/MapGeneration/Level1Map.gd" id="1_872kc"]
+[ext_resource type="Script" path="res://Assets/MapGeneration/RandomNumGen.gd" id="2_f0aar"]
+[ext_resource type="PackedScene" uid="uid://p2pwqg2lxk1t" path="res://Assets/MapGeneration/room_type_1.tscn" id="3_03p58"]
+[ext_resource type="PackedScene" uid="uid://d2yvbfjtsdnmf" path="res://Assets/MapGeneration/room_type_2.tscn" id="4_u4dff"]
+[ext_resource type="PackedScene" uid="uid://fvo5m8ehqjvf" path="res://Assets/MapGeneration/room_type_3.tscn" id="5_h7h72"]
+[ext_resource type="PackedScene" uid="uid://drhey6qyj8l5g" path="res://Assets/MapGeneration/room_type_4.tscn" id="6_isaa6"]
+[ext_resource type="PackedScene" uid="uid://6y02js3m5kqw" path="res://Assets/MapGeneration/room_type_5.tscn" id="7_vh2xk"]
+[ext_resource type="PackedScene" uid="uid://d3pwwkoodk366" path="res://Assets/MapGeneration/room_type_6.tscn" id="8_ncjs0"]
+[ext_resource type="PackedScene" uid="uid://bmspydsb82e0" path="res://Assets/MapGeneration/room_type_7.tscn" id="9_wyrjt"]
+[ext_resource type="PackedScene" uid="uid://durdc0tm762gw" path="res://Assets/MapGeneration/room_type_8.tscn" id="10_fws8o"]
+[ext_resource type="Texture2D" uid="uid://cvb1y3842yai2" path="res://Assets/MapPieces/Wall_topper.png" id="11_q3mwj"]
+[ext_resource type="Texture2D" uid="uid://dv7ht2ywppt40" path="res://Assets/MapPieces/TilesetTest.png" id="12_wmbbx"]
+[ext_resource type="Texture2D" uid="uid://bqvm7b5y8gdtk" path="res://Assets/MapPieces/Wall.png" id="13_d203g"]
+[ext_resource type="PackedScene" uid="uid://gwmo12xsoi64" path="res://Assets/Player/Player.tscn" id="14_eqhnv"]
+[ext_resource type="PackedScene" uid="uid://dwrarsoq122f0" path="res://Assets/inventory.tscn" id="15_fp5ab"]
+[ext_resource type="PackedScene" uid="uid://cknlxv7rny8b7" path="res://Assets/crafting_terminal.tscn" id="16_1pncg"]
+[ext_resource type="PackedScene" uid="uid://dr3tfagr03hdp" path="res://Assets/MapPieces/door.tscn" id="16_5n6n3"]
 
 [sub_resource type="Shader" id="Shader_awpjp"]
 code = "shader_type canvas_item;
@@ -41,7 +42,7 @@ shader = SubResource("Shader_awpjp")
 size = Vector2(160, 128)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vr15h"]
-texture = ExtResource("4_v3t7s")
+texture = ExtResource("11_q3mwj")
 texture_region_size = Vector2i(64, 16)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -54,7 +55,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_vr15h")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hschy"]
-texture = ExtResource("4_v3t7s")
+texture = ExtResource("11_q3mwj")
 texture_region_size = Vector2i(64, 16)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -76,7 +77,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hschy")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6fg5x"]
-texture = ExtResource("1_7jera")
+texture = ExtResource("12_wmbbx")
 separation = Vector2i(2, 2)
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -249,7 +250,7 @@ texture_region_size = Vector2i(64, 64)
 7:6/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m227y"]
-texture = ExtResource("3_tdcge")
+texture = ExtResource("13_d203g")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -446,7 +447,7 @@ texture_region_size = Vector2i(64, 64)
 3:6/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cxxot"]
-texture = ExtResource("4_v3t7s")
+texture = ExtResource("11_q3mwj")
 texture_region_size = Vector2i(64, 16)
 use_texture_padding = false
 0:0/0 = 0
@@ -470,7 +471,7 @@ sources/1 = SubResource("TileSetAtlasSource_m227y")
 sources/2 = SubResource("TileSetAtlasSource_cxxot")
 
 [node name="First Floor" type="Node2D"]
-script = ExtResource("1_onkc4")
+script = ExtResource("1_872kc")
 
 [node name="Entry??" type="Panel" parent="."]
 material = SubResource("ShaderMaterial_t2e13")
@@ -480,6 +481,7 @@ offset_right = 592.0
 offset_bottom = 805.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-190, -139)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 show_behind_parent = true
@@ -487,51 +489,51 @@ position = Vector2(625, 905)
 shape = SubResource("RectangleShape2D_3ob66")
 
 [node name="GenHolder" type="Node2D" parent="."]
-script = ExtResource("3_3i8qs")
+script = ExtResource("2_f0aar")
 
-[node name="RoomType1" parent="GenHolder" instance=ExtResource("4_jjuqo")]
+[node name="RoomType1" parent="GenHolder" instance=ExtResource("3_03p58")]
 offset_left = 2500.0
 offset_top = 850.0
 offset_right = 2660.0
 offset_bottom = 978.0
 
-[node name="RoomType2" parent="GenHolder" instance=ExtResource("5_1861j")]
+[node name="RoomType2" parent="GenHolder" instance=ExtResource("4_u4dff")]
 offset_left = 2500.0
 offset_top = 600.0
 offset_right = 2660.0
 offset_bottom = 728.0
 
-[node name="RoomType3" parent="GenHolder" instance=ExtResource("6_g0a03")]
+[node name="RoomType3" parent="GenHolder" instance=ExtResource("5_h7h72")]
 offset_left = 2500.0
 offset_top = 350.0
 offset_right = 2660.0
 offset_bottom = 478.0
 
-[node name="RoomType4" parent="GenHolder" instance=ExtResource("7_5u8qm")]
+[node name="RoomType4" parent="GenHolder" instance=ExtResource("6_isaa6")]
 offset_left = 2500.0
 offset_top = 100.0
 offset_right = 2660.0
 offset_bottom = 228.0
 
-[node name="RoomType5" parent="GenHolder" instance=ExtResource("8_fakkf")]
+[node name="RoomType5" parent="GenHolder" instance=ExtResource("7_vh2xk")]
 offset_left = 2000.0
 offset_top = 850.0
 offset_right = 2160.0
 offset_bottom = 978.0
 
-[node name="RoomType6" parent="GenHolder" instance=ExtResource("9_ns6r4")]
+[node name="RoomType6" parent="GenHolder" instance=ExtResource("8_ncjs0")]
 offset_left = 2000.0
 offset_top = 600.0
 offset_right = 2160.0
 offset_bottom = 728.0
 
-[node name="RoomType7" parent="GenHolder" instance=ExtResource("10_bue6o")]
+[node name="RoomType7" parent="GenHolder" instance=ExtResource("9_wyrjt")]
 offset_left = 2000.0
 offset_top = 350.0
 offset_right = 2160.0
 offset_bottom = 478.0
 
-[node name="RoomType8" parent="GenHolder" instance=ExtResource("11_7k3bc")]
+[node name="RoomType8" parent="GenHolder" instance=ExtResource("10_fws8o")]
 offset_left = 2000.0
 offset_top = 100.0
 offset_right = 2160.0
@@ -563,57 +565,59 @@ layer_0/tile_data = PackedInt32Array(2359323, 1, 0, 2359327, 1, 0, 2359359, 1, 0
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(422, 670)
 
-[node name="Player" parent="." instance=ExtResource("1_wmuxj")]
+[node name="Player" parent="." instance=ExtResource("14_eqhnv")]
 position = Vector2(594, 396)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Inventory" parent="UI" instance=ExtResource("14_fgykl")]
+[node name="Inventory" parent="UI" instance=ExtResource("15_fp5ab")]
 visible = false
+
+[node name="CraftingTerminal" parent="UI" instance=ExtResource("16_1pncg")]
 
 [node name="MapPieces" type="Node2D" parent="."]
 position = Vector2(592, 586)
 scale = Vector2(0.5, 0.5)
 
-[node name="Door1" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door1" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 scale = Vector2(1, 1)
 
-[node name="Door2" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door2" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 position = Vector2(-640, -448)
 scale = Vector2(1, 1)
 door_Num = 2
 
-[node name="Door3" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door3" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 position = Vector2(0, -448)
 scale = Vector2(1, 1)
 door_Num = 3
 
-[node name="Door4" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door4" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 position = Vector2(-640, 0)
 scale = Vector2(1, 1)
 door_Num = 4
 
-[node name="Door100" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door100" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 position = Vector2(-320, -1280)
 scale = Vector2(1, 1)
 door_Num = 100
 
-[node name="Door101" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door101" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 position = Vector2(2982, -680)
 scale = Vector2(1, 1)
 door_Num = 101
 
-[node name="Door202" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door202" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 position = Vector2(2976, -180)
 scale = Vector2(1, 1)
 door_Num = 202
 
-[node name="Door303" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door303" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 position = Vector2(2976, 320)
 scale = Vector2(1, 1)
 door_Num = 303
 
-[node name="Door404" parent="MapPieces" instance=ExtResource("16_5lncv")]
+[node name="Door404" parent="MapPieces" instance=ExtResource("16_5n6n3")]
 position = Vector2(2974, 820)
 scale = Vector2(1, 1)
 door_Num = 404

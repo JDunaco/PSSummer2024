@@ -41,10 +41,12 @@ func _on_body_entered(body):
 			player.position = roomPos4
 		elif door_Num == 404:
 			player.position = roomPos404
+		elif door_Num == 100:
+			if Game.doorLocked == false:
+				get_tree().change_scene_to_file("res://Scenes/BossFloor1.tscn")
+		elif door_Num == 200:
+			get_tree().change_scene_to_file("res://Scenes/Victory.tscn")
 		else : 
 			print("door invalid")
 
 
-
-func _on_body_exited(body):
-	player = null
