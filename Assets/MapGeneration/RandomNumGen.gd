@@ -18,10 +18,10 @@ var tiles = ["RoomType1","RoomType2","RoomType3","RoomType4","RoomType5","RoomTy
 # var to check if they have any more room spawns
 var tileNumToSpawn = 0
 
-var RoomSpawn1 = Vector2(2000,100)
-var RoomSpawn2 = Vector2(2000,350)
-var RoomSpawn3 = Vector2(2000,600)
-var RoomSpawn4 = Vector2(2000,850)
+var RoomSpawn1 = Vector2(1842,0)
+var RoomSpawn2 = Vector2(1842,350)
+var RoomSpawn3 = Vector2(1842,700)
+var RoomSpawn4 = Vector2(1842,1050)
 
 
 
@@ -81,9 +81,9 @@ func spawn(pos):
 	var maxRangeSpawn = Vector2(0,0)
 	maxRangeSpawn = pos
 	itemSpawnPos.x = randf_range(pos.x + 20, pos.x + 140)
-	pos.x = randf_range(pos.x+20, pos.x+140)
+	pos.x = randf_range(pos.x+20, pos.x+300)
 	itemSpawnPos.y = randf_range(pos.y + 20, pos.y + 140)
-	pos.y = randf_range(pos.y+20, pos.y+108)
+	pos.y = randf_range(pos.y+20, pos.y+150)
 	if itemSpawnPos.x >= pos.x - 20 and itemSpawnPos.x <= pos.x + 20 :
 		if(itemSpawnPos.x >= maxRangeSpawn.x - 20):
 			itemSpawnPos.x -= 20

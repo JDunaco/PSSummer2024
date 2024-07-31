@@ -5,15 +5,16 @@ var craftSlot2 = false
 var ingredientItem = ["Dragable Item 1","Dragable Item 2","Dragable Item 3"]
 var DoorLabel
 var NEILabel
+@onready var keyItem = get_node("Key")
 
 func _ready():
 	DoorLabel = get_node("DoorUnlocked")
 	NEILabel = get_node("NEI")
 
-func _process(delta):
-	$"Dragable Item 1/Label".text = "Item1 : " + str(Game.items[0])
-	$"Dragable Item 2/Label".text = "Item2 : " + str(Game.items[1])
-	$"Dragable Item 3/Label".text = "Item3 : " + str(Game.items[2])
+func _process(_delta):
+	$"Dragable Item 1/Label".text = "Pencil : " + str(Game.items[0])
+	$"Dragable Item 2/Label".text = "Powder : " + str(Game.items[1])
+	$"Dragable Item 3/Label".text = "Water : " + str(Game.items[2])
 
 func _checkIfSlotFull():
 	if get_node(ingredientItem[0]).craftingSlot1 == true:
@@ -49,4 +50,5 @@ func _checkIfSlotFull():
 func _on_button_button_up():
 	if _checkIfSlotFull() == true:
 		DoorLabel.show()
+		keyItem.show()
 		Game.doorLocked = false

@@ -44,12 +44,11 @@ text = "Quit
 "
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 131.0
-offset_top = 196.0
-offset_right = 580.0
-offset_bottom = 455.0
-text = "Wizard
-Delinquent"
+offset_left = 123.0
+offset_top = 295.0
+offset_right = 572.0
+offset_bottom = 554.0
+text = "SneakSpell"
 label_settings = SubResource("LabelSettings_nou3m")
 horizontal_alignment = 1
 

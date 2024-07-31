@@ -13,13 +13,13 @@ var roomPos404
 var teleport = false
 
 func _ready():
-	roomPos1 =Vector2(2080, 205)
+	roomPos1 =Vector2(2040, 210)
 	roomPos101 =Vector2(592,622)
-	roomPos2 =Vector2(2080, 455)
+	roomPos2 =Vector2(2040, 555)
 	roomPos202 =Vector2(272,400)
-	roomPos3 =Vector2(2080, 705)
+	roomPos3 =Vector2(2040, 905)
 	roomPos303 =Vector2(592,400)
-	roomPos4 =Vector2(2080, 955)
+	roomPos4 =Vector2(2040, 1255)
 	roomPos404 =Vector2(272,622)
 
 func _on_body_entered(body):

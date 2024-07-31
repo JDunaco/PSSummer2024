@@ -1,10 +1,53 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbr6rxcrsqp6b"]
+[gd_scene load_steps=11 format=3 uid="uid://cbr6rxcrsqp6b"]
 
-[ext_resource type="Texture2D" uid="uid://jfy5rwgqog87" path="res://Assets/Player/light.png" id="1_gs6tf"]
 [ext_resource type="Script" path="res://Assets/Mobs/boss_1.gd" id="1_ygmo8"]
-[ext_resource type="Texture2D" uid="uid://c53cr2hqyciu7" path="res://icon.svg" id="2_7tjck"]
+[ext_resource type="Texture2D" uid="uid://c653bbpckxiii" path="res://Assets/Mobs/light.png" id="2_ia5ko"]
+[ext_resource type="Texture2D" uid="uid://cenbin67g5qte" path="res://Assets/Mobs/Shadow1.png" id="3_bs8y6"]
+[ext_resource type="Texture2D" uid="uid://ggg6nj2cgyw6" path="res://Assets/Mobs/Shadow2.png" id="4_2n7mx"]
+[ext_resource type="Texture2D" uid="uid://d1m5vxwsfjx0s" path="res://Assets/Mobs/Shadow3.png" id="5_33i0t"]
+[ext_resource type="Texture2D" uid="uid://bfoaxpyayrbqo" path="res://Assets/Mobs/Shadow4.png" id="6_sv3ju"]
+[ext_resource type="Texture2D" uid="uid://c7bg74xjgp77t" path="res://Assets/Mobs/Shadow5.png" id="7_uc810"]
+[ext_resource type="Texture2D" uid="uid://c00wega7kkgvn" path="res://Assets/Mobs/Shadow6.png" id="8_w6nxr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_opa0v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjjf5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bs8y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2n7mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_33i0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sv3ju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uc810")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w6nxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uc810")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sv3ju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_33i0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2n7mx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Boss1" type="CharacterBody2D"]
 script = ExtResource("1_ygmo8")
@@ -16,7 +59,7 @@ position = Vector2(28, 7)
 scale = Vector2(0.445153, 1)
 color = Color(1, 0.0941176, 0, 1)
 shadow_enabled = true
-texture = ExtResource("1_gs6tf")
+texture = ExtResource("2_ia5ko")
 offset = Vector2(633.66, -7)
 texture_scale = 6.75
 
@@ -36,10 +79,10 @@ target_position = Vector2(550, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_opa0v")
 
-[node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(0.985763, 0.210542, 0.22434, 1)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_7tjck")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.25, -2)
+sprite_frames = SubResource("SpriteFrames_fjjf5")
+offset = Vector2(3, 1)
 
 [connection signal="body_entered" from="BossLight/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="BossLight/Area2D" to="." method="_on_area_2d_body_exited"]

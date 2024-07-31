@@ -16,6 +16,7 @@ var playerInLight
 	#player = get_node("../Player")
 
 func _ready():
+	get_node("AnimatedSprite2D").play("default")
 	posCenter.x = centerPosX
 	posCenter.y = centerPosY
 	flashlight = get_node("BossLight")

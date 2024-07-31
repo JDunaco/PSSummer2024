@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://gwmo12xsoi64"]
+[gd_scene load_steps=7 format=3 uid="uid://gwmo12xsoi64"]
 
 [ext_resource type="Script" path="res://Assets/Player/Player.gd" id="1_2xh2x"]
-[ext_resource type="Texture2D" uid="uid://c53cr2hqyciu7" path="res://icon.svg" id="2_ad5li"]
 [ext_resource type="Texture2D" uid="uid://jfy5rwgqog87" path="res://Assets/Player/light.png" id="3_0frh8"]
+[ext_resource type="Texture2D" uid="uid://b0mixqe5s43y8" path="res://Assets/Player/BOi_1.png" id="3_kq8o7"]
+[ext_resource type="Texture2D" uid="uid://cvmfpkmu236gu" path="res://Assets/Player/BOi_2.png" id="4_mwqd4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu6yp"]
 size = Vector2(16, 26)
@@ -11,10 +12,21 @@ size = Vector2(16, 26)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ad5li")
+"texture": ExtResource("3_kq8o7")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("4_mwqd4")
+}, {
+"duration": 1.5,
+"texture": ExtResource("3_kq8o7")
+}],
+"loop": true,
+"name": &"Smoving",
 "speed": 5.0
 }]
 
@@ -30,50 +42,51 @@ position = Vector2(0, 0.295519)
 zoom = Vector2(4, 4)
 
 [node name="FlashLightRight" type="PointLight2D" parent="."]
-position = Vector2(7.615, 2)
-scale = Vector2(0.280612, 0.765625)
+position = Vector2(8, 0)
+scale = Vector2(2, 2)
 color = Color(0.885259, 0.593787, 0.131344, 1)
 energy = 2.44
 shadow_enabled = true
 texture = ExtResource("3_0frh8")
-offset = Vector2(96.8193, 0.267078)
+offset = Vector2(22.8193, 1.76708)
 
 [node name="FlashLightL" type="PointLight2D" parent="."]
 visible = false
-position = Vector2(-7.915, 1)
+position = Vector2(-7.73114, -0.704208)
 rotation = 3.14159
-scale = Vector2(0.280612, 0.765625)
+scale = Vector2(2, 2)
 color = Color(0.885259, 0.593787, 0.131344, 1)
 energy = 2.44
 shadow_enabled = true
 texture = ExtResource("3_0frh8")
-offset = Vector2(96.8193, 0.267078)
+offset = Vector2(22.9537, 1.41479)
 
 [node name="FlashLightDown" type="PointLight2D" parent="."]
 visible = false
-position = Vector2(-1, 13.125)
+position = Vector2(0.458344, 14.0999)
 rotation = 1.5708
-scale = Vector2(0.280612, 0.765625)
+scale = Vector2(2, 2)
 color = Color(0.885259, 0.593787, 0.131344, 1)
 energy = 2.44
 shadow_enabled = true
 texture = ExtResource("3_0frh8")
-offset = Vector2(96.8193, 0.267078)
+offset = Vector2(19.7694, 1.99653)
 
 [node name="FlashLightUP" type="PointLight2D" parent="."]
 visible = false
-position = Vector2(1, -12.645)
+position = Vector2(-0.486603, -12.9884)
 rotation = -1.5708
-scale = Vector2(0.280612, 0.765625)
+scale = Vector2(2, 2)
 color = Color(0.885259, 0.593787, 0.131344, 1)
 energy = 2.44
 shadow_enabled = true
 texture = ExtResource("3_0frh8")
-offset = Vector2(96.8193, 0.267078)
+offset = Vector2(20.3251, 2.0101)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 0.295519)
-scale = Vector2(0.125, 0.2)
+position = Vector2(1.744, 0.2)
+scale = Vector2(0.469, 0.55)
 sprite_frames = SubResource("SpriteFrames_352i2")
+animation = &"Smoving"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

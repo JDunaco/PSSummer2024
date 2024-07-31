@@ -8,6 +8,9 @@ var timerToStartPatrol = 2.0
 var patrolTimer = 4.0
 var rPatrol = false
 
+func _ready():
+	get_node("AnimatedSprite2D").play("default")
+
 func _physics_process(_delta):
 	velocity = Vector2.ZERO
 	if player:
@@ -63,3 +66,17 @@ func _on_player_detection_body_entered(body):
 func _on_player_detection_body_exited(body):
 	if body.name == "Player":
 		player = null
+
+
+func _on_player_death_body_entered(body):
+	if body.name == "Player":
+		Game.spotted = true
+
+
+func _on_spell_detection_body_entered(body):
+	player = body
+
+
+
+func _on_spell_detection_body_exited(_body):
+	player = null

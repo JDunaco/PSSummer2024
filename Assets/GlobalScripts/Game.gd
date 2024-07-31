@@ -5,7 +5,7 @@ var crafting = false
 var spotted = false
 var doorLocked = true
 
-func _process(delta):
+func _process(_delta):
 	if spotted == true:
 		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 		spotted = false

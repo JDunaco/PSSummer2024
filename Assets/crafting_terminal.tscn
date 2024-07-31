@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cknlxv7rny8b7"]
+[gd_scene load_steps=12 format=3 uid="uid://cknlxv7rny8b7"]
 
 [ext_resource type="Texture2D" uid="uid://ceen5w20gug3d" path="res://Assets/Random/Itemsize.png" id="1_d36vb"]
 [ext_resource type="Script" path="res://Assets/crafting_terminal.gd" id="1_kj2vb"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ckjcmds78ph2p" path="res://Assets/Random/Plus.png" id="7_57ccm"]
 [ext_resource type="PackedScene" uid="uid://r7xnii6to0l0" path="res://Assets/Ingredients/Draggable Sprite/dragable_item_2.tscn" id="7_fkrb2"]
 [ext_resource type="PackedScene" uid="uid://bo87po7tuu8l0" path="res://Assets/Ingredients/Draggable Sprite/dragable_item_3.tscn" id="7_rapyc"]
+[ext_resource type="Texture2D" uid="uid://drqfr0nxlqyd" path="res://Assets/Items/key.png" id="9_e4u38"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bv5rm"]
 font_size = 100
@@ -82,37 +83,38 @@ texture = ExtResource("7_57ccm")
 
 [node name="Dragable Item 1" parent="." instance=ExtResource("7_7irhh")]
 position = Vector2(200, 120)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(1, 1)
 
 [node name="Label" type="Label" parent="Dragable Item 1"]
-offset_left = -200.0
-offset_top = 400.0
-offset_right = 255.0
-offset_bottom = 537.0
+offset_left = -50.0
+offset_top = 90.0
+offset_right = 405.0
+offset_bottom = 227.0
+scale = Vector2(0.2, 0.2)
 text = "INV #"
 label_settings = SubResource("LabelSettings_bv5rm")
 
 [node name="Dragable Item 2" parent="." instance=ExtResource("7_fkrb2")]
 position = Vector2(400, 120)
-scale = Vector2(0.177396, 0.182071)
 
 [node name="Label" type="Label" parent="Dragable Item 2"]
-offset_left = -200.0
-offset_top = 450.0
-offset_right = 255.0
-offset_bottom = 587.0
+offset_left = -50.0
+offset_top = 90.0
+offset_right = 405.0
+offset_bottom = 227.0
+scale = Vector2(0.2, 0.2)
 text = "INV #"
 label_settings = SubResource("LabelSettings_bv5rm")
 
 [node name="Dragable Item 3" parent="." instance=ExtResource("7_rapyc")]
 position = Vector2(600, 119.925)
-scale = Vector2(0.190957, 0.1841)
 
 [node name="Label" type="Label" parent="Dragable Item 3"]
-offset_left = -200.0
-offset_top = 450.0
-offset_right = 255.0
-offset_bottom = 587.0
+offset_left = -50.0
+offset_top = 90.0
+offset_right = 405.0
+offset_bottom = 227.0
+scale = Vector2(0.2, 0.2)
 text = "INV #"
 label_settings = SubResource("LabelSettings_bv5rm")
 
@@ -137,5 +139,11 @@ text = "Not Enough
 Items"
 label_settings = SubResource("LabelSettings_fi1ei")
 horizontal_alignment = 1
+
+[node name="Key" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1037, 522)
+scale = Vector2(15, 15)
+texture = ExtResource("9_e4u38")
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
